@@ -13,6 +13,7 @@ Person subhana = new(); //instance of class Person
 subhana.name = "Subhana Chitrakar";
 subhana.nid = 232232333134141;
 subhana.dob = new DateTime(2024,8,5);
+subhana.PrintDetails();
 
 
 
