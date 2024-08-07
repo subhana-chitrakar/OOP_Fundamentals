@@ -13,7 +13,7 @@ Person subhana = new(); //instance of class Person
 subhana.name = "Subhana Chitrakar";
 subhana.nid = 232232333134141;
 subhana.dob = new DateTime(2024,8,5);
-subhana.PrintDetails();
+//subhana.PrintDetails();
 
 
 
@@ -21,11 +21,22 @@ Person subhana1 = new(); //instance of class Person
 subhana1.name = "Subhana Chitrakar1";
 subhana1.nid = 3645654646;
 subhana1.dob = new DateTime(2025,4,1);
-subhana1.PrintDetails();
+//subhana1.PrintDetails();
 
 Person subhana2 = new Person("Subhana2",new DateTime(2000,5,30),4235453522); 
-subhana2.PrintDetails();
+//subhana2.PrintDetails();
 
 
 Page page= new Page(100,150,"Hello");
-page.PrintPageInfo();
+//page.PrintPageInfo();
+
+
+
+Student s = new Student("Subhana Chitrakar" , new DateTime(2000,5,30), "Test","Engineering");
+var x = s.CalculateAge();
+Console.WriteLine(x);
+var y = s.GetInitials();
+Console.WriteLine(s.CapitalizeName());
+
+var output = Student.StudentDetails(initial: y, age :x );
+Console.WriteLine(output);
