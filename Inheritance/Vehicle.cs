@@ -13,6 +13,7 @@ String vehicleNumber;
   }
 
   public string Brand {get; set;} = " ";
-  public string 
-
+ 
+  public DateTime Year {get; set;}
+  public VehicleType Type {get; set;} = VehicleType.Wagon;
 }
