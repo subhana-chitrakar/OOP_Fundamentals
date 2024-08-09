@@ -10,10 +10,10 @@
 
 //Modify instantiation process EV = number, range, batteryCapacity
 ElectricVehicle car1 = new ElectricVehicle("BA PA 3455", 420, 40);
-EngineVehicle car2 = new EngineVehicle("BA PA 1234",5555, 6);
-Console.WriteLine(car1.BatteryCapacity);
+IVehicle car2 = new EngineVehicle("BA PA 1234",5555, 6);
+Console.WriteLine(car2.GetDistanceCovered(20f));
 
 
-Generics g = new();
-g.PrintDetails<string,int>("Hello",123);
+// Generics g = new();
+// g.PrintDetails<string,int>("Hello",123);
 

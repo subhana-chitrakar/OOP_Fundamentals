@@ -12,4 +12,5 @@ public class EngineVehicle : Vehicle, IVehicle //multiple inheritance
     public float EngineCC { get; set; }
     public float Mileage { get; set; }
     public float GetDistanceCovered(float oilUsed) => Mileage * oilUsed;
+
 }

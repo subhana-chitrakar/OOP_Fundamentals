@@ -1,4 +1,5 @@
-public class ElectricVehicle : Vehicle,IVehicle  //syntax for inheritance
+
+public class ElectricVehicle : Vehicle, IVehicle  //syntax for inheritance
 {
     public ElectricVehicle(string number, int batteryCapacity , short range) : base(number)
     {
