@@ -10,11 +10,23 @@ class Student(string name, DateTime dob, string college, string program){
 
 //Calculate age of a student in years and months eg. 22 years and 2 months
 
-public string CalculateAge(){
+/*public string CalculateAge(){
     var ageSpan = DateTime.Now - dob ;
     var year = ageSpan.Days / 365 ;
     var month = ageSpan.Days % 365 / 30 ;  
-    return $"{year} years and {month} months";
+    return $"{year} years and {month} months";*/
+
+  
+    public (string,int) CalculateAge(){   //tuple
+    var ageSpan = DateTime.Now - dob ;
+    var year = ageSpan.Days / 365 ;
+    var month = ageSpan.Days % 365 / 30 ;  
+    return ($"{year} years and {month} months", ageSpan.Days);
+    
+    
+    
+    
+
 }
 
 
@@ -34,9 +46,11 @@ public string CapitalizeName() => name.ToUpper(); // arrow function
 
 
 //Print details of a student. output format : SC is 24 years and 2 months old
+public static string StudentDetails(string initial, string age, int ageDays = 0 )  =>
+        $"{initial} is {age} old.{((ageDays == 0) ? "" : $"In days she/he is {ageDays}")}"; 
 
-public static string StudentDetails(string initial, string age) => $"{initial} is {age} old";
 
+public static string PrintDetails(string details) => $"Student Details: {details} "; ///method overloading
 
 
 }

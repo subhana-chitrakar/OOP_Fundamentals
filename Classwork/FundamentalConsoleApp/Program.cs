@@ -33,10 +33,16 @@ Page page= new Page(100,150,"Hello");
 
 
 Student s = new Student("Subhana Chitrakar" , new DateTime(2000,5,30), "Test","Engineering");
-var x = s.CalculateAge();
-Console.WriteLine(x);
+(string AgeString, int AgeDays) = s.CalculateAge();
+
 var y = s.GetInitials();
 Console.WriteLine(s.CapitalizeName());
 
-var output = Student.StudentDetails(initial: y, age :x );
+var output = Student.StudentDetails(initial:y , age :AgeString );
+var output1 = Student.StudentDetails(initial:y , age : AgeString, ageDays: AgeDays );
 Console.WriteLine(output);
+Console.WriteLine(output1);
+
+
+
+
