@@ -47,3 +47,4 @@ Console.WriteLine(output1);
 
 Generic g = new();
 g.PrintDetails<string,int>("Hello",123);
+
