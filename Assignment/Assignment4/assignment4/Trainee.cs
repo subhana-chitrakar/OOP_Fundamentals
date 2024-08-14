@@ -3,24 +3,18 @@ using System.Collections.Generic;
 using System.Linq;
 namespace trainee;
 
-internal class Trainee
+internal class Trainee (string name, DateTime dob, string college, string program)
 {
-    public string Name { get; }
-    public DateTime Dob { get; }
-    public string College { get; }
-    public string Program { get; }
+  
+     public string name = name;
+    public DateTime dob = dob;
+    public string college = college;
+    public string program = program;
 
-    public Trainee(string name, DateTime dob, string college, string program)
-    {
-        Name = name;
-        Dob = dob;
-        College = college;
-        Program = program;
-    }
     // Calculate age of a trainee in years and months
     public (string, int) CalculateAge()
     {
-        var ageSpan = DateTime.Now - Dob;
+        var ageSpan = DateTime.Now - dob;
         var years = ageSpan.Days / 365;
         var months = (ageSpan.Days % 365) / 30;
         return ($"{years} Years and {months} Months", ageSpan.Days);
@@ -28,16 +22,16 @@ internal class Trainee
 
     // Get name initials of a trainee
     public string GetInitials()
+
     {
-        var nameParts = Name.Split(" ");
+        var nameParts = name.Split(" ");
         char firstInitial = nameParts[0][0];
         var lastInitial = nameParts[^1][0];
         return $"{firstInitial}{lastInitial}";
     }
     public static string PrintDetails(Trainee trainee) =>
-        $"{trainee.Name}\t{trainee.Dob.ToShortDateString()}\t{trainee.College}\t{trainee.Program}";
+        $"{trainee.name}\t{trainee.dob.ToShortDateString()}\t{trainee.college}\t{trainee.program}";
 }
 
 
 
-}

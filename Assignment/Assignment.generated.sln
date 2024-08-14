@@ -1,0 +1,45 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.5.002.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Assignment1", "Assignment1\Assignment1.csproj", "{3EC8301A-6545-476D-8F39-F50257353FC5}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assignment2", "Assignment2", "{7F75C268-7BD1-449B-9261-7FBA5E8A5C66}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "CalculatePersonBMI", "Assignment2\CalculatePersonBMI\CalculatePersonBMI.csproj", "{BE23DA3E-17D1-463C-80DD-11F2E6DF8662}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Assignment3", "Assignment3", "{CAFAFAC0-612A-4DEC-B85A-EABDFB55612A}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "SeleniumProject", "Assignment3\SeleniumProject\SeleniumProject.csproj", "{B3598ECE-FB22-4A19-BAE2-175105771207}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{3EC8301A-6545-476D-8F39-F50257353FC5}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3EC8301A-6545-476D-8F39-F50257353FC5}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3EC8301A-6545-476D-8F39-F50257353FC5}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3EC8301A-6545-476D-8F39-F50257353FC5}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BE23DA3E-17D1-463C-80DD-11F2E6DF8662}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BE23DA3E-17D1-463C-80DD-11F2E6DF8662}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BE23DA3E-17D1-463C-80DD-11F2E6DF8662}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BE23DA3E-17D1-463C-80DD-11F2E6DF8662}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B3598ECE-FB22-4A19-BAE2-175105771207}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B3598ECE-FB22-4A19-BAE2-175105771207}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B3598ECE-FB22-4A19-BAE2-175105771207}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B3598ECE-FB22-4A19-BAE2-175105771207}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{BE23DA3E-17D1-463C-80DD-11F2E6DF8662} = {7F75C268-7BD1-449B-9261-7FBA5E8A5C66}
+		{B3598ECE-FB22-4A19-BAE2-175105771207} = {CAFAFAC0-612A-4DEC-B85A-EABDFB55612A}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {F4FE0E94-B4F1-42EA-BE4A-CEC30F3596D8}
+	EndGlobalSection
+EndGlobal
