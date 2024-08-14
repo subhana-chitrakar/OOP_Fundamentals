@@ -48,6 +48,8 @@
 
 
 
+Generic g = new();
+g.PrintDetails<string,int>("Hello",123);
 
 //PlayingWithCollections.LearnArrays();
 

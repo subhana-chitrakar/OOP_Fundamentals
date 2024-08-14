@@ -9,7 +9,7 @@ public class ElectricVehicle : Vehicle, IVehicle  //syntax for inheritance
 
 
 
-    public int BatteryCapacity{ get; set;}
+    public float BatteryCapacity{ get; set;}
     public short Range {get; set;}
 
 
