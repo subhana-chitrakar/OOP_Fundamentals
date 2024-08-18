@@ -1,6 +1,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using trainee;
 namespace report;
 
 
@@ -23,48 +24,45 @@ internal class Reports
     public static void LetsQuery()
     {
         // Get all trainees grouped by their college
+          Console.WriteLine("Trainees Grouped by College:");
         var traineeByCollege = trainees
-            .GroupBy(x => x.College)
-            .Select(college => new
-            {
-                College = college.Key,
-                Trainees = college.ToList()
-            });
+            .GroupBy(x => x.college);
+        
 
         
         foreach (var group in traineeByCollege)
         {
-            Console.WriteLine($"College: {group.College}");
-            foreach (var trainee in group.Trainees)
+            foreach (var trainee in group)
             {
-                Console.WriteLine(Trainee.PrintDetails(trainee));
+                Console.WriteLine($"{trainee.name}\t{trainee.dob}\t{trainee.college}\t{trainee.program}");
             }
         }
 
         // Get name and age of trainees who are in their teens
-        var teens = trainees
-            .Select(t => new { t.Name, Age = t.CalculateAge() })
-            .Where(t => t.Age.Item2 >= 13 * 365 && t.Age.Item2 < 20 * 365);
+         Console.WriteLine("Trainees in Teens:");
+               var traineeInTeens = trainees.Where(x => x.CalculateAge().Item2 / 365 >= 13 && x.CalculateAge().Item2 / 365 <= 19);
 
-        foreach (var teen in teens)
+        foreach (var teen in traineeInTeens)
         {
-            Console.WriteLine($"Trainees in their teens: {teen.Name} - {teen.Age.Item1}");
+            Console.WriteLine($"{teen.name}\t{teen.CalculateAge().Item1}");
         }
 
 
        
 
         // Get name initials, age and academic program of trainees and order result by initials
+          Console.WriteLine("Trainees Ordered by Initials:");
         var orderedByInitials = trainees
             .Select(t => new
             {
                 Initials = t.GetInitials(),
                 Age = t.CalculateAge().Item1,
-                t.Program
+                t.program
             })
             .OrderBy(t => t.Initials);
         foreach (var item in orderedByInitials)
         {
-            Console.WriteLine($"Trainees ordered by initials {item.Initials} - {item.Age} - {item.Program}");
+            Console.WriteLine($"Trainees ordered by initials {item.Initials} - {item.Age} - {item.program}");
         }
     }
+}
